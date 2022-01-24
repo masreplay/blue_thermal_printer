@@ -163,15 +163,15 @@ public class BlueThermalPrinterPlugin implements MethodCallHandler, RequestPermi
       case "getBondedDevices":
         try {
 
-          if (ContextCompat.checkSelfPermission(registrar.activity(),
-                  Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-
-            ActivityCompat.requestPermissions(registrar.activity(),
-                    new String[] { Manifest.permission.ACCESS_COARSE_LOCATION }, REQUEST_COARSE_LOCATION_PERMISSIONS);
-
-            pendingResult = result;
-            break;
-          }
+//          if (ContextCompat.checkSelfPermission(registrar.activity(),
+//                  Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+//
+//            ActivityCompat.requestPermissions(registrar.activity(),
+//                    new String[] { Manifest.permission.ACCESS_COARSE_LOCATION }, REQUEST_COARSE_LOCATION_PERMISSIONS);
+//
+//            break;
+//          }
+          pendingResult = result;
 
           getBondedDevices(result);
 
